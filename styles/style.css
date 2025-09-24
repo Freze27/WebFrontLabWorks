@@ -32,11 +32,12 @@ img {
 
 
 .promo {
-    height: 100vh;
     background: url(../img/Main_bg.jpg) no-repeat center/cover;
-
     padding: 22px;
-    text-align: center
+    text-align: center;
+    width: 1920px;
+    height: 800px;
+    margin: 0 auto;
 }
 .promo__logo img {
     display: block;
@@ -85,20 +86,259 @@ img {
 .promo__button{
     width: 315px;
     height: 72px;
-    margin-top: 75px;
+    margin: 75px auto 0;
     color: white;
     text-transform: uppercase;
     font-size: 21px;
     border-radius: 4px;
-    background: linear-gradient(to bottom, #fea754 20%, #ff8c3c 100%);
+    background: linear-gradient(to bottom, #FEB05D 10%, #FF4D00 100%);
+    border: none;
 }
 
 .promo__more{
     font-size: 15px;
     color: white;
-    margin-top: 75px
+    margin: 75px auto 0;
+    text-transform: uppercase;
 }
 
 .promo__more img{
+    margin: 10px auto 0;
+}
+
+.about {
+    background: url(../img/About_bg.png) no-repeat center/cover;
+    padding: 22px;
+    text-align: center;
+    width: 1920px;
+    height: 592px;
+    margin: 0 auto;
+}
+
+.about__title{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 30px auto 0;
+    color: rgba(37, 37, 37, 1);
+}
+
+.about__title-line {
+    background-color: #F9BF3B;
+    height: 7px;
+    width: 220px;
+    border: none;
+    margin: 14px auto 0;
+}
+
+.about__subtitle{
+    font-size: 23px;
+    color: #4A4A4A;
+    text-transform: lowercase;
     margin: 15px auto 0;
+}
+
+.about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+    padding: 42px 400px;
+}
+
+.about__container .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+}
+
+.about__container .column img {
+    width: 342px;
+    height: 201px;
+}
+
+.about__container .column p {
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.about-online-radio {
+    background-color: black;
+    padding: 22px;
+    text-align: center;
+    width: 1920px;
+    height: 592px;
+    margin: 0 auto;
+}
+
+.about-online-radio__image {
+    margin-top: 191px;
+    margin-left: 307px;
+    margin-right: 998px;
+    width: 615px;
+    height: 351px;
+}
+
+.about-online-radio__content {
+    margin-left: 857px;
+    margin-right: 390px;
+    margin-top: -450px;
+}
+
+.about-online-radio__title {
+    color: #F9BF3B;
+    font-size: 30px;
+    text-transform: uppercase;
+    width: 750px;
+    height: 35px;
+    text-align: right;
+    font-weight: bold
+}
+
+.about-online-radio__description{
+    margin-top: 16px;
+    font-size: 16px;
+    color: white;
+    text-align: right;
+    width: 750px;
+    height: 272px;
+    font-weight: lighter
+}
+
+.benefits{
+    background: url(../img/Benefits_bg.jpg) no-repeat center/cover;
+    padding: 22px;
+    text-align: center;
+    width: 1920px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.benefits__title{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 80px;
+}
+
+.benefits__title-line {
+    background-color: #F9BF3B;
+    height: 7px;
+    width: 220px;
+    border: none;
+    margin-top: 12px;
+}
+
+.benefits__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 391px;
+}
+
+.benefits__container .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+}
+
+.benefits__container .column p {
+    font-size: 16px;
+    color: #EFEFEF;
+    width: 224px;
+    font-weight: lighter;
+}
+
+.bonuses {
+    background-color: white;
+    padding: 22px;
+    text-align: center;
+    width: 1920px;
+    height: 613px;
+    margin: 0 auto;
+}
+
+.bonuses__logo {
+    margin: 80px auto 0;
+    height: 150px;
+    width: 155px;
+}
+
+.bonuses__title {
+    font-size: 30px;
+    color: #252525;
+    margin: 80px auto 0;
+    width: 1116px;
+    height: 91px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.bonuses__button{
+    width: 315px;
+    height: 72px;
+    margin: 60px auto 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 21px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #FEB05D 10%, #FF4D00 100%);
+    border: none;
+}
+
+.work-schedule {
+    background-color: #0F0B0B;
+    padding: 22px;
+    text-align: center;
+    width: 1920px;
+    height: 528px;
+    margin: 0 auto;
+}
+
+.work-schedule__image {
+    margin: 50px auto 0;
+}
+
+.work-schedule__subtitle {
+    margin: 40px auto 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.work-schedule__title {
+    margin: 20px auto 0;
+    color: #f9bf3b;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold
+}
+
+.work-schedule__parting-words {
+    color: white;
+    margin: 20px auto 0;
+    font-size: 23px;
+}
+
+.contacts {
+    background-color: #1A1A1A;
+    padding: 22px;
+    text-align: center;
+    width: 1920px;
+    height: 165px;
+    margin: 0 auto;
+}
+
+.contacts__info {
+    color: #888888;
+    font-size: 16px;
+    margin: 58px auto 0;
+    line-height: 150%;
+}
+
+.contacts__info-underline {
+    color: #888888;
 }
