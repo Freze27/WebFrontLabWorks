@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Website for Ceramic soul brand" />
+		<meta name="author" content="Awesome student" />
+		<title>Ceramic soul</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<section class="promo">
+			<img src="/src/img/promo/potter.jpg" alt="potter" class="promo__potter-img" />
+			<div class="container">
+				<header class="header">
+					<div class="header__menu">
+						<div class="header__menu-close">
+							<span></span>
+							<span></span>
+						</div>
+						<nav class="header__menu-nav">
+							<ul>
+								<li>
+									<a href="/catalog" class="header__menu-link">catalog</a>
+								</li>
+								<li><a href="/blog" class="header__menu-link">blog</a></li>
+								<li><a href="/about" class="header__menu-link">about</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__top">
+						<div class="burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<a href="#" class="header__logo">
+							<img src="/src/logo/logo.png" alt="logo"/>
+						</a>
+						<div class="header__icons">
+							<a href="#"><span class="icon-search"></span></a>
+							<a href="#"><span class="icon-shopping-bag"></span></a>
+						</div>
+					</div>
+					<nav class="header__nav">
+						<a href="catalog.html" class="header__link">Catalog</a>
+						<a href="blog.html" class="header__link">Blog</a>
+						<a href="about.html" class="header__link">About</a>
+					</nav>
+				</header>
+				<div class="promo__wrapper">
+					<h1 class="title-h1-italic promo__title">
+						Make your dream come true<br/>or decorate your home
+					</h1>
+					<div class="promo__cta">
+						<img
+							src="/src/img/promo/ceramic-vase.jpg"
+							alt="vase"
+							class="promo__vase-img"
+						/>
+						<button class="btn-shop promo__btn">shop now</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="type-work">
+			<div class="container">
+				<h2 class="title-bold">
+					Create or buy
+				</h2>
+				<div class="type-work__table">
+					<div class="type-work__col">
+						<h3 class="subtitle-h3">
+							Our store
+						</h3>
+						<img
+							src="/src/img/about/store.jpg"
+							alt="store"
+							class="type-work__img-store"
+						/>
+						<p class="text type-work__text-col-1">
+							Welcome to <span class="text-ceramic">Ceramic Soul</span>, where each piece tells a story of craftsmanship and creativity. Our handmade ceramics are thoughtfully designed and carefully crafted, blending traditional techniques with modern aesthetics. Whether you're looking for a unique gift or a special addition to your home, our collection offers timeless pieces that bring warmth and authenticity to any space.
+						</p>
+					</div>
+					<div class="type-work__col">
+						<h3 class="subtitle-h3">
+							Our workshop
+						</h3>
+						<img
+							src="/src/img/about/ceramic.jpg"
+							alt="ceramic"
+							class="type-work__img-ceramic"
+						/>
+						<p class="text type-work__text-col-2">
+							At <span class="text-ceramic">Ceramic Soul</span> workshop, we don’t just craft ceramics—we invite you to get hands-on and create your own unique pieces. Through our engaging masterclasses, you’ll learn traditional techniques, work with natural materials, and experience the joy of shaping clay into something truly personal.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="touch">
+			<div class="container">
+				<h2 class="title-bold">Get in touch</h2>
+				<div class="touch__wrapper">
+						<img class="touch__img" src="/src/img/form/tea.jpg" alt="tea" />
+						<form class="touch__form" action="#">
+							<fieldset class="touch__fieldset">
+							<div class="touch__input-block">
+								<label class="touch__label" for="name">Name</label>
+								<input
+									class="touch__input"
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Name"
+									required
+								/>
+							</div>
+
+							<div class="touch__input-block">
+								<label class="touch__label" for="email">Email</label>
+								<input
+									class="touch__input"
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Email"
+									required
+								/>
+							</div>
+						</fieldset>
+
+						<label class="touch__label" for="question">Your question</label>
+						<textarea
+							class="touch__textarea"
+							name="question"
+							id="question"
+							placeholder="Question"
+							required
+						></textarea>
+
+						<label class="touch__label touch__check-block" for="checkbox">
+							<input
+								required
+								class="touch__checkbox"
+								type="checkbox"
+								id="checkbox"
+							/>
+							I agree with the <a href="#">terms</a>
+						</label>
+						<button class="btn-default touch__btn">Send request</button>
+					</form>
+					<img src="/src/img/form/vase.png" alt="vase" class="touch__decor" />
+				</div>
+			</div>
+		</section>
+
+		<section class="works">
+			<div class="container">
+				<h2 class="title-bold">Check out our works</h2>
+				<div class="works__wrapper">
+					<div class="swiper works__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="/src/img/works/tea-3.jpg" alt="tea-3" />
+							</div>
+							<div class="swiper-slide">
+								<img src="/src/img/works/tea-2.jpg" alt="tea-2" />
+							</div>
+							<div class="swiper-slide">
+								<img src="/src/img/works/tea-1.jpg" alt="tea-1" />
+							</div>
+							<div class="swiper-slide">
+								<img src="/src/img/works/tea-2.jpg" alt="tea-2" />
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<button class="my-prev-button works__slider-nav"></button>
+					<button class="my-next-button works__slider-nav"></button>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+				<div class="footer__newsletter">
+					<h2 class="footer__header">Newsletter</h2>
+					<div class="footer__text footer__text">
+					Keep up to date with news and promotions
+					</div>
+					<form action="#" class="footer__form">
+					<input
+						placeholder="Enter your e-mail"
+						type="email"
+						class="footer__input"
+						required
+					/>
+					<label class="footer__check-block" for="footer__checkbox">
+						<input
+						required
+						class="footer__checkbox"
+						type="checkbox"
+						id="footer__checkbox"
+						/>
+						I agree with the <a href="#">terms</a>
+					</label>
+					<button class="btn-light footer__form-btn">submit</button>
+					</form>
+				</div>
+
+				<div class="footer__links">
+					<div class="footer__links-block">
+					<h2 class="footer__header">discover</h2>
+					<div class="footer__nav">
+						<a class="footer__link" href="about.html">About Us</a>
+						<a class="footer__link" href="blog.html">Blog</a>
+					</div>
+					</div>
+
+					<div class="footer__links-block">
+					<h2 class="footer__header">Shopping</h2>
+					<div class="footer__nav">
+						<a class="footer__link" href="catalog.html">Catalog</a>
+					</div>
+					</div>
+
+					<div class="footer__links-block">
+					<h2 class="footer__header">information</h2>
+					<div class="footer__nav">
+						<a class="footer__link" href="#">Terms and Conditions</a>
+					</div>
+					</div>
+				</div>
+
+				<div class="footer__social">
+					<h2 class="footer__header">follow us</h2>
+					<div class="footer__social-block">
+					<a href="https://www.facebook.com/"><span class="icon-facebook"></span></a>
+					<a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
+					<a href="https://www.pinterest.com/"><span class="icon-pinterest-circled"></span></a>
+					</div>
+				</div>
+				</div>
+
+				<div class="footer__copyright">
+				© Copyright 2025, Ceramic soul
+				</div>
+			</div>
+		</footer>
+
+
+		<script type="module" src="/src/js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.works {
+  margin-top: 60px;
+
+  &__slider {
+    margin-top: 40px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  .swiper-slide img {
+    width: 340px;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 0%;
+    opacity: 1;
+    background-color: $dark;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $ceramic;
+  }
+
+  .my-prev-button,
+  .my-next-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .works {
+    &__slider {
+      margin-top: 45px;
+    }
+
+    .swiper-slide img {
+      width: 400px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works {
+    &__slider {
+      margin: 80px 40px 0 40px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      margin: 0;
+    }
+
+    .my-prev-button,
+    .my-next-button {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 21px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-top: 2px solid $dark;
+        border-right: 2px solid $dark;
+      }
+    }
+
+    .my-prev-button {
+      left: 13px;
+      &:before {
+        transform: rotate(-135deg);
+      }
+    }
+
+    .my-next-button {
+      right: 13px;
+      &:before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .works {
+    padding-top: 100px;
+
+    &__slider {
+      margin: 80px 85px 0 85px;
+    }
+
+    .my-prev-button {
+      left: 40px;
+    }
+
+    .my-next-button {
+      right: 40px;
+    }
+  }
+}

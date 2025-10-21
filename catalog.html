@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Website for Ceramic soul brand" />
+		<meta name="author" content="Awesome student" />
+		<title>Ceramic soul</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+        <section class="catalog">
+			<div class="container">
+				<header class="header">
+					<div class="header__menu">
+						<div class="header__menu-close">
+							<span></span>
+							<span></span>
+						</div>
+						<nav class="header__menu-nav">
+							<ul>
+								<li>
+									<a href="/catalog" class="header__menu-link">catalog</a>
+								</li>
+								<li><a href="/blog" class="header__menu-link">blog</a></li>
+								<li><a href="/about" class="header__menu-link">about</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__top">
+						<div class="burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<a href="index.html" class="header__logo">
+							<img src="/src/logo/logo.png" alt="logo"/>
+						</a>
+						<div class="header__icons">
+							<a href="#"><span class="icon-search"></span></a>
+							<a href="#"><span class="icon-shopping-bag"></span></a>
+						</div>
+					</div>
+					<nav class="header__nav">
+						<a href="catalog.html" class="header__link">Catalog</a>
+						<a href="blog.html" class="header__link">Blog</a>
+						<a href="about.html" class="header__link">About</a>
+					</nav>
+				</header>
+				<h1 class="title-bold catalog__title">Our Pottery</h1>
+				<div class="catalog__tabs">
+					<button class="catalog__filter" data-category="tea">For tea</button>
+					<button class="catalog__filter" data-category="kitchen">For kitchen</button>
+					<button class="catalog__filter" data-category="plants">For plants</button>
+				</div>
+				<div class="catalog__grid"></div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+				<div class="footer__newsletter">
+					<h2 class="footer__header">Newsletter</h2>
+					<div class="footer__text footer__text">
+					Keep up to date with news and promotions
+					</div>
+					<form action="#" class="footer__form">
+					<input
+						placeholder="Enter your e-mail"
+						type="email"
+						class="footer__input"
+						required
+					/>
+					<label class="footer__check-block" for="footer__checkbox">
+						<input
+						required
+						class="footer__checkbox"
+						type="checkbox"
+						id="footer__checkbox"
+						/>
+						I agree with the <a href="#">terms</a>
+					</label>
+					<button class="btn-light footer__form-btn">submit</button>
+					</form>
+				</div>
+
+				<div class="footer__links">
+					<div class="footer__links-block">
+					<h2 class="footer__header">discover</h2>
+					<div class="footer__nav">
+						<a class="footer__link" href="about.html">About Us</a>
+						<a class="footer__link" href="blog.html">Blog</a>
+					</div>
+					</div>
+
+					<div class="footer__links-block">
+					<h2 class="footer__header">Shopping</h2>
+					<div class="footer__nav">
+						<a class="footer__link" href="catalog.html">Catalog</a>
+					</div>
+					</div>
+
+					<div class="footer__links-block">
+					<h2 class="footer__header">information</h2>
+					<div class="footer__nav">
+						<a class="footer__link" href="#">Terms and Conditions</a>
+					</div>
+					</div>
+				</div>
+
+				<div class="footer__social">
+					<h2 class="footer__header">follow us</h2>
+					<div class="footer__social-block">
+					<a href="https://www.facebook.com/"><span class="icon-facebook"></span></a>
+					<a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
+					<a href="https://www.pinterest.com/"><span class="icon-pinterest-circled"></span></a>
+					</div>
+				</div>
+				</div>
+
+				<div class="footer__copyright">
+				© Copyright 2025, Ceramic soul
+				</div>
+			</div>
+		</footer>
+
+		<script type="module" src="/src/js/script.js"></script>
+	</body>
+</html>
