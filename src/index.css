@@ -1,0 +1,94 @@
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #0f172a; color: #e2e8f0; }
+
+.container {
+  max-width: 640px;
+  margin: 56px auto;
+  padding: 24px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+}
+
+h1 { margin: 0 0 16px; font-size: 28px; }
+
+.todo-form { display: flex; gap: 8px; margin-bottom: 16px; }
+.todo-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #374151;
+  background: #0b1220;
+  color: #e5e7eb;
+  border-radius: 8px;
+}
+.todo-form button {
+  padding: 10px 14px;
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.todo-form button:hover { background: #273043; }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid #1f2937;
+  background: #0b1220;
+  border-radius: 8px;
+}
+
+.checkbox { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.checkbox input { width: 16px; height: 16px; }
+
+.title { user-select: none; }
+.title.done { text-decoration: line-through; opacity: .6; }
+
+.icon-btn {
+  border: 1px solid #374151;
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+.icon-btn:hover { background: #273043; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+.footer .danger {
+  border: 1px solid #7f1d1d;
+  background: #1f2937;
+  color: #fecaca;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.footer .danger:hover { background: #2b3449; }
+
+.empty {
+  opacity: .7;
+  padding: 12px;
+  text-align: center;
+  border: 1px dashed #334155;
+  border-radius: 8px;
+  background: #0b1220;
+}
