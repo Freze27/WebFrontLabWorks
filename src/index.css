@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-poppins;
+  }
+  
+  .dark body {
+    background: linear-gradient(110.05deg, #383838 0%, rgba(158, 158, 158, 0) 71.82%);
+    background-color: #1E1E1E;
+    min-height: 100vh;
+  }
+}
