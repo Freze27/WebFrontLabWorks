@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #F6F7F9;
+}
+
+.dark body {
+  background-color: #1A202C;
+}
+
+input[type='date'] {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type='date']:after {
+  content: '';
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@layer components {
+  .padding-layout {
+    @apply max-w-[1536px] mx-auto px-6 md:px-16;
+  }
+
+  .padding-layout-home {
+    @apply max-w-[1440px] mx-auto px-6 md:px-16;
+  }
+
+  .h1-bold {
+    @apply text-[32px] font-bold leading-[38.40px];
+  }
+
+  .h1-semibold {
+    @apply text-[32px] font-semibold leading-[38.40px];
+  }
+
+  .h3-bold {
+    @apply text-lg font-extrabold;
+  }
+
+  .h3-semibold {
+    @apply text-lg font-medium;
+  }
+
+  .base-regular {
+    @apply text-xl font-normal leading-10;
+  }
+
+  .base-medium {
+    @apply text-xl font-semibold leading-relaxed;
+  }
+
+  .base-semibold {
+    @apply text-xl font-medium leading-relaxed;
+  }
+
+  .base-bold {
+    @apply text-xl font-bold leading-relaxed;
+  }
+
+  .p-bold {
+    @apply text-base font-bold;
+  }
+
+  .p-semibold {
+    @apply text-base font-semibold;
+  }
+
+  .p-medium {
+    @apply text-base font-medium leading-relaxed;
+  }
+
+  .body-bold {
+    @apply text-sm font-bold;
+  }
+
+  .body-medium {
+    @apply text-sm font-medium;
+  }
+
+  .body-regular {
+    @apply text-sm font-normal leading-7;
+  }
+
+  .small-regular {
+    @apply text-xs font-normal leading-tight;
+  }
+
+  .btn-primary {
+    @apply px-5 py-2.5 flex items-center bg-blue-500 rounded gap-2 text-center text-white text-xs md:text-base font-semibold justify-center hover:opacity-80 transition-opacity;
+  }
+
+  .btn-rent {
+    @apply px-8 py-[13px] md:px-9 md:py-4 bg-blue-500 rounded gap-2 font-bold text-base text-white flex items-center justify-center hover:opacity-80 transition-opacity;
+  }
+
+  .btn-show-more {
+    @apply px-5 py-2.5 flex items-center bg-blue-500 rounded gap-2 text-center text-white text-xs md:text-base font-semibold justify-center hover:opacity-80 transition-opacity;
+  }
+
+  /* Range input styles */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-webkit-slider-track {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .dark input[type="range"]::-webkit-slider-track {
+    background: #374151;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #3563E9;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: -6px;
+  }
+
+  input[type="range"]::-moz-range-track {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .dark input[type="range"]::-moz-range-track {
+    background: #374151;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    background: #3563E9;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+
+  .rental-datepicker {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 8px;
+    background-color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+  }
+
+  .rental-datepicker .react-datepicker__header {
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .rental-datepicker .react-datepicker__day {
+    color: #1f2937;
+  }
+
+  .rental-datepicker .react-datepicker__day--selected,
+  .rental-datepicker .react-datepicker__day--keyboard-selected {
+    background-color: #3563E9;
+    color: #ffffff;
+  }
+
+  .rental-datepicker .react-datepicker__day:hover {
+    background-color: rgba(53, 99, 233, 0.15);
+  }
+
+  .rental-datepicker-popper {
+    z-index: 50;
+  }
+
+  .dark .rental-datepicker {
+    background-color: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .dark .rental-datepicker .react-datepicker__header {
+    background-color: #111827;
+    border-bottom-color: #374151;
+  }
+
+  .dark .rental-datepicker .react-datepicker__current-month,
+  .dark .rental-datepicker .react-datepicker__day,
+  .dark .rental-datepicker .react-datepicker__day-name {
+    color: #f3f4f6;
+  }
+
+  .dark .rental-datepicker .react-datepicker__day--selected,
+  .dark .rental-datepicker .react-datepicker__day--keyboard-selected {
+    background-color: #4c6ef5;
+    color: #fdfdfd;
+  }
+
+  .dark .rental-datepicker .react-datepicker__day:hover {
+    background-color: rgba(76, 110, 245, 0.35);
+  }
+}
