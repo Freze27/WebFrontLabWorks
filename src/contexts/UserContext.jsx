@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { userApi } from "../api/mockApi";
+import { userApi } from "../api/api";
 
 const UserContextObj = createContext({});
 

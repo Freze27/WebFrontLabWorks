@@ -1,5 +1,5 @@
 import { createContext, useReducer, useEffect } from "react";
-import { carApi } from "../api/mockApi";
+import { carApi } from "../api/api";
 
 export const ActionKind = {
   GetAllCars: "GET_ALL_CARS",

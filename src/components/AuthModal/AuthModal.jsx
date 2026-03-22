@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useModalContext } from "../../contexts/ModalContext";
-import { authApi } from "../../api/mockApi";
+import { authApi } from "../../api/api";
 
 export default function AuthModal() {
   const { isOpen, toggleModal } = useModalContext();

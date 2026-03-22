@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserContextObj } from "../../contexts/UserContext";
+import { rentApi } from "../../api/api";
 
 const PICKUP_LOCATIONS = [
   "Airport Terminal A",
@@ -74,13 +75,35 @@ export default function Rent() {
     );
   }
 
-  const handleConfirm = (event) => {
-    event.preventDefault();
+  const [submitError, setSubmitError] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
-    if (!pickupDate || !dropoffDate || rentalDays <= 0) {
+  const handleConfirm = async (event) => {
+    event.preventDefault();
+    if (!pickupDate || !dropoffDate || rentalDays <= 0) return;
+    if (!userObject?._id) {
+      setSubmitError("Please sign in to rent a car.");
       return;
     }
-    navigate("/");
+
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      await rentApi.createRent({
+        userId:      userObject._id,
+        carId:       car._id,
+        startDate:   pickupDate,
+        endDate:     dropoffDate,
+        totalAmount: totalPrice,
+      });
+      navigate("/");
+    } catch (err) {
+      setSubmitError(
+        err?.response?.data?.message ?? err.message ?? "Failed to create rent."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -226,8 +249,15 @@ export default function Rent() {
             </div>
           </section>
 
-          <button type="submit" className="btn-primary w-full md:w-auto">
-            Confirm and Rent Now
+          {submitError && (
+            <p className="text-sm text-red-600">{submitError}</p>
+          )}
+          <button
+            type="submit"
+            disabled={submitting}
+            className="btn-primary w-full md:w-auto disabled:opacity-60"
+          >
+            {submitting ? "Processing…" : "Confirm and Rent Now"}
           </button>
         </form>
 
