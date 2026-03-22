@@ -185,4 +185,30 @@ export const stripeApi = {
   }),
 };
 
-export default { carApi, userApi, authApi, rentApi, stripeApi };
+export const adminApi = {
+  getAllRents: async (limit = 100) => {
+    const { data } = await http.get('/rents', { params: { limit } });
+    return Array.isArray(data) ? data : (data.data ?? []);
+  },
+  updateRent: async (id, dto) => {
+    const { data } = await http.patch(`/rents/${id}`, dto);
+    return data;
+  },
+  deleteRent: async (id) => {
+    await http.delete(`/rents/${id}`);
+  },
+  getAllUsers: async (limit = 100) => {
+    const { data } = await http.get('/users', { params: { limit } });
+    const items = Array.isArray(data) ? data : (data.data ?? []);
+    return items.map(toFrontendUser);
+  },
+  updateUser: async (id, dto) => {
+    const { data } = await http.patch(`/users/${id}`, dto);
+    return data;
+  },
+  deleteUser: async (id) => {
+    await http.delete(`/users/${id}`);
+  },
+};
+
+export default { carApi, userApi, authApi, rentApi, adminApi, stripeApi };
