@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
         <DropDownContext>
           <UserContextProvider>
             <CarsContextProvider>
-              <BrowserRouter>
+              <BrowserRouter basename="/WebFrontLabWorks/">
                 <App />
               </BrowserRouter>
             </CarsContextProvider>

@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContextObj } from "../../contexts/UserContext";
-import { userApi } from "../../api/mockApi";
+import { userApi } from "../../api/api";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import Logo from "../../assets/icon/Logo.png";
 import navAvatar from "../../assets/img/nav-avatar.png";
@@ -9,8 +9,7 @@ import { useModalContext } from "../../contexts/ModalContext";
 
 export default function Header() {
   const userObject = useContext(UserContextObj);
-  const location = useLocation();
-  const { toggleModal } = useModalContext();
+const { toggleModal } = useModalContext();
 
   const openAuth = () => {
     toggleModal();
@@ -18,10 +17,8 @@ export default function Header() {
 
   const logout = async () => {
     await userApi.logout();
-    window.location.reload();
+    userObject.refreshUser();
   };
-
-  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="sticky top-0 z-40 flex h-[100px] w-full items-center border-b border-slate-300/40 bg-white-0 dark:border-slate-800 dark:bg-gray-900">
